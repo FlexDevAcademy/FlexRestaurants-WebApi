@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js" defer></script>
+    <title>Flex Resturants</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <div class="container">
+        <a class="navbar-brand text-white" href="#">FlexResturants</a>
+      </div>
+    </nav>
+    <div class="container">
+      <section class="my-2">
+        <h4>1. Get All Restaurants</h4>
+        <button class="btn btn-primary" onclick="getAll()">Send request</button>
+        <pre class="my-3" id="getAllResponse"></pre>
+      </section>
+      <hr />
+      <section class="my-2">
+        <h4>2. Get Restaurant By Id</h4>
+        <div class="d-flex">
+          <input class="form-control col-2 mr-2" id="itemIdInput" onchange="itemIdInputChange()" type="number" />
+          <button class="btn btn-primary" id="itemIdButton" onclick="getById()" disabled>Send request</button>
+        </div>
+        <pre class="my-3" id="getByIdResponse"></pre>
+        <div class="my-3" id="getByIdResponseCard"></div>
+      </section>
+      <hr />
+      <section class="my-2">
+        <h4>3. Get Restaurant By Name</h4>
+        <div class="d-flex">
+          <select class="form-control col-2 mr-2" id="itemNameInput" onchange="itemNameInputChange()">
+            <option value="" disabled selected hidden>Please select...</option>
+            <option value="BaraBoo">BaraBoo</option>
+            <option value="Forni Rossi">Forni Rossi</option>
+            <option value="Impresja">Impresja</option>
+          </select>
+          <button class="btn btn-primary" id="itemNameButton" onclick="getByName()" disabled>Send request</button>
+        </div>
+        <pre class="my-3" id="getByNameResponse"></pre>
+        <div class="my-3" id="getByNameResponseCard"></div>
+      </section>
+      <hr />
+      <section class="my-2">
+        <h4>4. Get Restaurant(s) By Rating</h4>
+        <div class="d-flex">
+          <input class="form-control col-2 mr-2" id="itemRatingInput" onchange="itemRatingInputChange()" type="number" />
+          <button class="btn btn-primary" id="itemRatingButton" onclick="getByRating()" disabled>Send request</button>
+        </div>
+        <pre class="my-3" id="getByRatingResponse"></pre>
+        <div class="d-inline-flex my-3" id="getByRatingResponseCard"></div>
+      </section>
+    </div>
+  </body>
+</html>

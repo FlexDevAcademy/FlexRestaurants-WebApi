@@ -40,7 +40,7 @@ namespace FlexRestaurants.Controllers
 
 				if (restaurant == null)
 				{
-					return NotFound($"Found no restaurant having id: {id}");
+					return NotFound(new { message = $"Found no restaurant having id: {id}" });
 				}
 
 				return Ok(restaurant);
@@ -61,7 +61,7 @@ namespace FlexRestaurants.Controllers
 
 				if (restaurant == null)
 				{
-					return NotFound($"Found no restaurant having name: {name}");
+					return NotFound(new { message = $"Found no restaurant having name: {name}" });
 				}
 
 				return Ok(restaurant);
@@ -125,7 +125,7 @@ namespace FlexRestaurants.Controllers
 
 				if (existing == null)
 				{
-					return NotFound($"Found no restaurant having id: {update.Id}");
+					return NotFound(new { message = $"Found no restaurant having id: {update.Id}" });
 				}
 
 				existing.Name = update.Name;
@@ -153,7 +153,7 @@ namespace FlexRestaurants.Controllers
 
 				if (existing == null)
 				{
-					return NotFound($"Found no restaurant having id: {id}");
+					return NotFound(new { message = $"Found no restaurant having id: {id}" });
 				}
 
 				string oldName = existing.Name;
@@ -180,7 +180,7 @@ namespace FlexRestaurants.Controllers
 
 				if (existing == null)
 				{
-					return NotFound($"Found no restaurant having id: {id}");
+					return NotFound(new { message = $"Found no restaurant having id: {id}" });
 				}
 
 				_context.Restaurants.Remove(existing);

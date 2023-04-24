@@ -32,7 +32,7 @@ namespace FlexRestaurants.Data
 				Description = "Pizza Italiana",
 				ImageUrl = "https://lh3.googleusercontent.com/p/AF1QipMQ01W2GmcXKP-zc2dQ2yOHi8uba5WsnyMA0uc=s1280-p-no-v1",
 				TelephoneNumber = "513 296 866",
-				Rating = 4.75
+				Rating = 3.75
 			},
 			new () {
 				Id = 3,
@@ -40,7 +40,7 @@ namespace FlexRestaurants.Data
 				Description = "Domowe obiadki",
 				ImageUrl = "https://impresjapoznan.pl/wp-content/uploads/2018/11/lokal-z-zewnatrz-2048x0.jpg",
 				TelephoneNumber = "512 893 875",
-				Rating = 3.01
+				Rating = 2.01
 			},
 		};
 	}
